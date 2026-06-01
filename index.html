@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beamotion</title>
+
     <style>
-        /* Style de base pour le corps */
-        body, html {
+        html, body {
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* Couleur de fond initiale */
-            height: 100%;
+            background-color: #ffffff;
         }
 
-        /* Image qui s'ajuste à la largeur de l'écran */
+        picture,
         img {
-            width: 100%; /* L'image occupe toute la largeur de l'écran */
-            height: auto; /* La hauteur s'ajuste automatiquement pour garder les proportions */
-            display: block; /* Supprime l'espace blanc sous l'image */
+            display: block;
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
 
-    <!-- Image PNG qui s'ajuste à la largeur de l'écran -->
-    <img src="Beamotion_Landpage2026.jpg" alt="Beamotion">
+    <picture>
+        <source
+            media="(orientation: portrait)"
+            srcset="land_page_offer_portrait.jpg">
+
+        <source
+            media="(orientation: landscape)"
+            srcset="land_page_offer_landscape.jpg">
+
+        <img src="land_page_offer_landscape.jpg" alt="Beamotion">
+    </picture>
 
 </body>
 </html>
-
